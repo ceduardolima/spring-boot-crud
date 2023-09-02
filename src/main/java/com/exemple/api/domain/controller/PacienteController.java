@@ -1,7 +1,6 @@
 package com.exemple.api.domain.controller;
 
 import com.exemple.api.domain.paciente.*;
-import com.exemple.api.paciente.*;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
