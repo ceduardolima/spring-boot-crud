@@ -3,7 +3,7 @@ package com.exemple.api.address;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
-public record Address(
+public record DadosEndereco(
         @NotBlank
         String logradouro,
         String numero,

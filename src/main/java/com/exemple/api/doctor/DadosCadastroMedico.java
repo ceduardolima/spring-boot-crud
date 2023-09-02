@@ -1,6 +1,6 @@
 package com.exemple.api.doctor;
 
-import com.exemple.api.address.Address;
+import com.exemple.api.address.DadosEndereco;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -22,6 +22,6 @@ public record DadosCadastroMedico(
         Especialidade especialidade,
         @NotNull
         @Valid
-        Address endereco
+        DadosEndereco endereco
 ) {
 }
