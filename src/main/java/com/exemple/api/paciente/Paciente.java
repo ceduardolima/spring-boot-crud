@@ -32,4 +32,11 @@ public class Paciente {
         this.endereco = new Endereco(dados.endereco());
         this.ativo = true;
     }
+
+    public void atualizar(DadosAtualizacaoPaciente dados) {
+        if (dados.nome() != null)
+            this.nome = dados.nome();
+        if (dados.telefone() != null)
+            this.telefone = dados.telefone();
+    }
 }
