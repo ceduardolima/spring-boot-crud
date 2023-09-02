@@ -2,6 +2,7 @@ package com.exemple.api.controller;
 
 import com.exemple.api.paciente.*;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -32,5 +33,12 @@ public class PacienteController {
     public void atualizar (@RequestBody @Valid DadosAtualizacaoPaciente dados) {
         var paciente = repository.getReferenceById(dados.id());
         paciente.atualizar(dados);
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void excluir(@PathVariable @NotNull Long id) {
+        var paciente = repository.getReferenceById(id);
+        paciente.excluir();
     }
 }

@@ -39,4 +39,8 @@ public class Paciente {
         if (dados.telefone() != null)
             this.telefone = dados.telefone();
     }
+
+    public void excluir() {
+        this.ativo = false;
+    }
 }
