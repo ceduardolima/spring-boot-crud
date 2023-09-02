@@ -1,6 +1,5 @@
-package com.exemple.api.paciente;
+package com.exemple.api.domain.paciente;
 
-import com.exemple.api.doctor.Medico;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

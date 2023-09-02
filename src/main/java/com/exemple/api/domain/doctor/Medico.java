@@ -1,4 +1,4 @@
-package com.exemple.api.doctor;
+package com.exemple.api.domain.doctor;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

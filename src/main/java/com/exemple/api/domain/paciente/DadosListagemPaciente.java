@@ -1,4 +1,4 @@
-package com.exemple.api.paciente;
+package com.exemple.api.domain.paciente;
 
 public record DadosListagemPaciente(
         Long id,

@@ -1,4 +1,4 @@
-package com.exemple.api.paciente;
+package com.exemple.api.domain.paciente;
 
 import com.exemple.api.address.DadosEndereco;
 import jakarta.validation.Valid;
