@@ -1,4 +1,4 @@
-package com.exemple.api.infra;
+package com.exemple.api.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.apache.coyote.Response;
