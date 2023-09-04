@@ -2,6 +2,7 @@ package com.exemple.api.domain.controller;
 
 import com.exemple.api.domain.usuario.DadosAutenticacao;
 import com.exemple.api.domain.usuario.Usuario;
+import com.exemple.api.infra.security.DadosTokenJWT;
 import com.exemple.api.infra.security.TokenService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +27,10 @@ public class AutenticacaoController {
     @PostMapping
     @Transactional
     public ResponseEntity login(@RequestBody @Valid DadosAutenticacao dados) {
-        var token = new UsernamePasswordAuthenticationToken(dados.login(), dados.senha());
-        var authentication = manager.authenticate(token);
-        return ResponseEntity.ok(tokenService.gerarToken((Usuario) authentication.getPrincipal()));
+        var authenticationToken = new UsernamePasswordAuthenticationToken(dados.login(), dados.senha());
+        var authentication = manager.authenticate(authenticationToken);
+        var tokenJWK = tokenService.gerarToken((Usuario) authentication.getPrincipal());
+        return ResponseEntity.ok(new DadosTokenJWT(tokenJWK));
     }
 
 }
