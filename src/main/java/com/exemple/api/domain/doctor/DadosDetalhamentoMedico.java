@@ -1,5 +1,7 @@
 package com.exemple.api.domain.doctor;
 
+import com.exemple.api.address.Endereco;
+
 public record DadosDetalhamentoMedico(
         Long id,
         String nome,

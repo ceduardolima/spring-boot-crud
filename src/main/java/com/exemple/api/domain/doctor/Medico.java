@@ -1,5 +1,6 @@
 package com.exemple.api.domain.doctor;
 
+import com.exemple.api.address.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

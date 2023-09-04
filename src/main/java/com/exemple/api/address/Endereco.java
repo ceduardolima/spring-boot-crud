@@ -1,4 +1,4 @@
-package com.exemple.api.domain.doctor;
+package com.exemple.api.address;
 
 import com.exemple.api.address.DadosEndereco;
 import jakarta.persistence.Embeddable;
